@@ -29,10 +29,15 @@ namespace LicencePlateValidation
                 if (Province >= 81 || Province < 1)
                 {
                     return "Not Valid";
-                } 
+                }
             }
 
             if (args[1].Length + args[2].Length > 6)
+            {
+                return "Not Valid";
+            }
+
+            if (args[2].Length == 1)
             {
                 return "Not Valid";
             }
