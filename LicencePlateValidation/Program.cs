@@ -42,6 +42,11 @@ namespace LicencePlateValidation
                 return "Not Valid";
             }
 
+            if (args[1].Length > 3)
+            {
+                return "Not Valid";
+            }
+
             if (IsAllDigits(args[2]) && IsAllLetters(args[1]))
             {
                 return "Valid";
