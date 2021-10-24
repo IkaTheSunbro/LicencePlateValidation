@@ -8,7 +8,7 @@ namespace LicencePlateValidation
     class Program
     {
         static bool IsAllDigits(string s) => s.All(char.IsDigit);
-        static bool IsAllLetters(string s) => s.All(char.IsLetter);
+        static bool IsAllLetters(string s) => Regex.IsMatch(s, @"^[a-zA-Z]+$");;
 
         static bool isNum(char num)
         {
