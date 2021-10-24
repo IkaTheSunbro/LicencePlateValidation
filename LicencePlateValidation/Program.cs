@@ -24,6 +24,11 @@ namespace LicencePlateValidation
 
         static string PlateValidation(string[] args)
         {
+            if (args[0].Length != 2)
+            {
+                return "Not Valid"; 
+            }
+            
             if (int.TryParse(args[0], out int Province))
             {
                 if (Province >= 81 || Province < 1)
@@ -41,7 +46,7 @@ namespace LicencePlateValidation
             {
                 return "Not Valid";
             }
-
+            
             if (args[1].Length > 3)
             {
                 return "Not Valid";
